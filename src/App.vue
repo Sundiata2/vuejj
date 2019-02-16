@@ -1,28 +1,65 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <v-app dark>
+      <v-content>
+        <router-view></router-view>
+      </v-content>
+      <Dock :routes="routes" />
+    </v-app>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// Here is where we import components
+import Dock from './components/Dock';
+import Glossary from './components/views/Glossary';
+import Flow from './components/views/Flow';
+import Theory from './components/views/Theory';
+
+const appRoutes = [
+  {
+    id: 1,
+    path: "/glossary",
+    title: "glossary"
+  },
+  {
+    id: 2,
+    path: "/theory",
+    title: "theory"
+  },
+  {
+    id: 3,
+    path: "/flow",
+    title: "flow"
+  }
+];
 
 export default {
   name: 'app',
+  // Must include the imported components here
   components: {
-    HelloWorld
+    Dock
+  },
+  // Here we can put our components state
+  data() {
+    return {
+      example: 'it still renders',
+      routes: appRoutes
+    }
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+/* Note how this style is not scoped */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.4;
 }
 </style>
