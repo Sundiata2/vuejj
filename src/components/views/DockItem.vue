@@ -3,7 +3,7 @@
     <router-link :to="route.path">
       <v-btn dark>
         {{ route.title }}
-        <!-- <v-icon>ondemand_video</v-icon> -->
+        <v-icon>{{route.iconName}}</v-icon>
       </v-btn>
     </router-link>
   </div>
