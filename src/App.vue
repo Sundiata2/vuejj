@@ -12,7 +12,7 @@
 <script>
 // Here is where we import components
 import Dock from './components/Dock';
-import Glossary from './components/views/Glossary';
+import Glossary from './components/views/glossary/index';
 import Flow from './components/views/Flow';
 import Theory from './components/views/Theory';
 
