@@ -12,7 +12,7 @@
 <script>
 // Here is where we import components
 import Dock from './components/Dock';
-import Glossary from './components/views/Glossary';
+import Glossary from './components/views/glossary/index';
 import Flow from './components/views/Flow';
 import Theory from './components/views/Theory';
 
@@ -20,17 +20,20 @@ const appRoutes = [
   {
     id: 1,
     path: "/glossary",
-    title: "glossary"
+    title: "Glossary",
+    iconName: "format_list_bulleted"
   },
   {
     id: 2,
     path: "/theory",
-    title: "theory"
+    title: "Theory",
+    iconName: "book"
   },
   {
     id: 3,
     path: "/flow",
-    title: "flow"
+    title: "Flow",
+    iconName: "all_inclusive"
   }
 ];
 

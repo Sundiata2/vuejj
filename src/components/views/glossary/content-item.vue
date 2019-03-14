@@ -1,17 +1,17 @@
 <template>
-  <div class="glossary-container">
-    Glossary Container
+  <div class="content-item-container">
+    Content Item
   </div>
 </template>
 
 <script>
 export default {
-  name: "Glossary"
+  name: "ContentItem"
 }
 </script>
 
 <style scoped>
-.glossary-container {
+.content-item-container {
   display: flex;
 }
 </style>

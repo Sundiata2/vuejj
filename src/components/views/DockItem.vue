@@ -1,9 +1,9 @@
 <template>
-  <div>
-    <router-link :to="route.path">
+  <div class="dock-item-container">
+    <router-link :to="route.path" class="router-link-style">
       <v-btn dark>
         {{ route.title }}
-        <!-- <v-icon>ondemand_video</v-icon> -->
+        <v-icon>{{route.iconName}}</v-icon>
       </v-btn>
     </router-link>
   </div>
@@ -22,7 +22,14 @@ export default {
 
 
 <style scoped>
+.dock-item-container {
+  display: flex;
+  justify-content: center;
+}
 
+.router-link-style {
+  text-decoration: none;
+}
 </style>
 
 
