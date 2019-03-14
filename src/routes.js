@@ -4,6 +4,7 @@ import Flow from './components/views/Flow';
 import Theory from './components/views/Theory';
 
 export default [
+  { path: '/', component: Theory },
   { path: '/glossary', component: Glossary },
   { path: '/flow', component: Flow },
   { path: '/theory', component: Theory }

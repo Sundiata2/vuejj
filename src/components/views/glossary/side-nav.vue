@@ -7,9 +7,6 @@
       <router-link :to={} class="router-link-style">
         <v-icon>book</v-icon>
       </router-link>
-      <router-link :to="route.path" class="router-link-style">
-          <v-icon>{{route.iconName}}</v-icon>
-      </router-link>
     </v-toolbar>
   </v-card>
 </template>
